@@ -6,7 +6,7 @@ The main functionality of the application is selecting a date for an outdoor eve
 
 ## Structure
 Web site with logic implemented with JS:
-- main page with a calendar and buttons for creating events.
+- main page with a calendar, weather forecast widget, buttons for creating events.
 - page for creating and overview an event.
 - settings page for editing account settings and personal data.
 
