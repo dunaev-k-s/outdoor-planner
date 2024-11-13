@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outdoor planner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 10px;
+        }
+
+        /* header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .menu {
+            display: flex;
+            gap: 10px;
+        }
+
+        .menu button {
+            padding: 10px 15px;
+            color: #fff;
+            background-color: #555;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .menu button:hover {
+            background-color: #777;
+        }
+
+        /* hero actions */
+        .main-content {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .main-content h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .main-content h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .main-content .btn-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .main-content .btn-group button {
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .main-content .btn-group button:hover {
+            background-color: #555;
+        }
+
+        /* Image */
+        .image-block {
+            width: 100%;
+            max-width: 800px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .image-block img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Widget block */
+        .widget-block {
+            width: 100%;
+            max-width: 800px;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .widget-block-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .widget-block-content h3 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .widget-block-content h4 {
+            font-size: 1.2em;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .widget-block .widget-button {
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+            align-self: flex-start;
+        }
+
+        .widget-block .widget-button:hover {
+            background-color: #555;
+        }
+
+        .embed-widget {
+            margin-top: 15px;
+            width: 100%;
+            height: 300px;
+            background-color: #e0e0e0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #888;
+            font-size: 1em;
+        }
+
+        /* Footer */
+        .footer {
+            width: 100%;
+            max-width: 1200px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .footer .footer-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer .footer-logo img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .footer .social-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .footer .social-buttons a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+
+        .footer .social-buttons a:hover {
+            color: #aaa;
+        }
+
+        .footer .footer-text {
+            width: 60%;
+            text-align: right;
+        }
+
+        .footer .footer-text h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .footer .footer-text p {
+            font-size: 1.2em;
+            color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Outdoor planner logo">
+            <span>Outdoor planner</span>
+        </div>
+        <nav class="menu">
+            <button>Dashboard</button>
+            <button>Calendar</button>
+            <button>Forecast</button>
+            <button>Sign in</button>
+        </nav>
+    </header>
+
+    <!-- Hero action -->
+    <section class="main-content">
+        <h1>What's Meant to Be Will Find Its Way</h1>
+        <h2>Embrace the Journey</h2>
+        <div class="btn-group">
+            <button>Create event</button>
+            <button>Explore weather</button>
+        </div>
+    </section>
+
+    <!-- Image Block -->
+    <section class="image-block">
+        <img src="image.jpg" alt="Image description">
+    </section>
+
+    <!-- Calendar widget block -->
+    <section class="widget-block">
+        <div class="widget-block-content">
+            <div>
+                <h3>Calendar</h3>
+                <h4>Track events</h4>
+            </div>
+            <button class="widget-button">Edit</button>
+        </div>
+        <div class="embed-widget">
+            Calendar widget will be here
+        </div>
+    </section>
+
+    <!-- Weather widget block -->
+    <section class="widget-block">
+        <div class="widget-block-content">
+            <div>
+                <h3>Weather forecast</h3>
+                <h4>Check abilities</h4>
+            </div>
+            <button class="widget-button">Details</button>
+        </div>
+        <div class="embed-widget">
+            Weather widget will be here
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-logo">
+            <img src="logo.png" alt="Outdoor planner logo">
+            <div class="social-buttons">
+                <a href="https://facebook.com" target="_blank">F</a>
+                <a href="https://twitter.com" target="_blank">T</a>
+                <a href="https://instagram.com" target="_blank">I</a>
+                <a href="https://linkedin.com" target="_blank">L</a>
+            </div>
+        </div>
+        <div class="footer-text">
+            <h3>Outdoor planner application</h3>
+            <p>This is an educational project for help in learning the programming languages Javascript and Python.
+
+                Functionality:
+                The main functionality of the application is selecting a date for an outdoor event with the ability to
+                view the weather forecast. After selecting a date, the application should monitor changes in weather
+                conditions and notify the user if anything changes. Over time, additional conditions will be added, such
+                as the participation of other people who can join or leave, have tickets been purchased or other
+                available APIs.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
