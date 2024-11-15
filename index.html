@@ -27,19 +27,22 @@
             align-items: center;
             width: 100%;
             max-width: 1200px;
+            height: 111px;
             padding: 10px;
-            background-color: #333;
+            background-color: #FFFFFF;
             color: #fff;
         }
 
         .logo {
             display: flex;
             align-items: center;
+            color: #000000;
+            font-size: 28px;
         }
 
         .logo img {
-            width: 50px;
-            height: 50px;
+            width: 70px;
+            height: 78px;
             margin-right: 10px;
         }
 
@@ -57,14 +60,30 @@
             transition: background 0.3s;
         }
 
+        .auth button {
+            padding: 10px 15px;
+            color: #fff;
+            background-color: #555;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
         .menu button:hover {
+            background-color: #777;
+        }
+
+        .auth button:hover {
             background-color: #777;
         }
 
         /* hero actions */
         .main-content {
-            text-align: center;
-            margin-top: 20px;
+            text-align: center;            
+            width: 100%;
+            max-width: 1200px;
+            height: 400px;
+            background-color: #f5f5f5;
         }
 
         .main-content h1 {
@@ -80,10 +99,12 @@
 
         .main-content .btn-group {
             display: flex;
+            align-items: center;
+            justify-content: center;
             gap: 10px;
         }
 
-        .main-content .btn-group button {
+        .main-content .btn-event button {
             padding: 10px 20px;
             color: #fff;
             background-color: #333;
@@ -92,14 +113,28 @@
             transition: background 0.3s;
         }
 
-        .main-content .btn-group button:hover {
+        .main-content .btn-event button:hover {
+            background-color: #555;
+        }
+
+        .main-content .btn-weather button {
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .main-content .btn-weather button:hover {
             background-color: #555;
         }
 
         /* Image */
         .image-block {
             width: 100%;
-            max-width: 800px;
+            max-width: 1200px;
+            height: 400px;
             margin-top: 20px;
             text-align: center;
         }
@@ -113,7 +148,7 @@
         /* Widget block */
         .widget-block {
             width: 100%;
-            max-width: 800px;
+            max-width: 1200px;
             margin-top: 20px;
             padding: 20px;
             background-color: #f9f9f9;
@@ -156,7 +191,7 @@
         .embed-widget {
             margin-top: 15px;
             width: 100%;
-            height: 300px;
+            height: 650px;
             background-color: #e0e0e0;
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -171,8 +206,8 @@
         .footer {
             width: 100%;
             max-width: 1200px;
-            background-color: #333;
-            color: #fff;
+            background-color: #FFFFFF;
+            color: #1e1e1e;
             padding: 20px;
             display: flex;
             justify-content: space-between;
@@ -187,8 +222,8 @@
         }
 
         .footer .footer-logo img {
-            width: 50px;
-            height: 50px;
+            width: 90px;
+            height: 106px;
             margin-bottom: 10px;
         }
 
@@ -235,6 +270,9 @@
             <button>Dashboard</button>
             <button>Calendar</button>
             <button>Forecast</button>
+        </nav>
+
+        <nav class="auth">
             <button>Sign in</button>
         </nav>
     </header>
@@ -243,9 +281,14 @@
     <section class="main-content">
         <h1>What's Meant to Be Will Find Its Way</h1>
         <h2>Embrace the Journey</h2>
-        <div class="btn-group">
+        <div class="btn-group"></div>
+        <div class="btn-event">
             <button>Create event</button>
+        </div>
+
+        <div class="btn-weather">
             <button>Explore weather</button>
+        </div>
         </div>
     </section>
 
