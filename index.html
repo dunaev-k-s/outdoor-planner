@@ -33,12 +33,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 100%;            
+            width: 100%;
             height: 111px;
             padding: 32px 60px;
             background-color: #FFFFFF;
             color: #fff;
-            box-shadow: inset 0 -1px 2px 0 #d9d9d9;
+            box-shadow: inset 0 -1px 2px 0 #d9d9d9;            
         }
 
         .logo {
@@ -48,12 +48,19 @@
             font-size: 28px;
             font-family: 'Roboto';
             font-weight: 400;
+            text-decoration: none;
         }
 
         .logo img {
             width: 71px;
             height: 78px;
             margin-right: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover img {
+            transform: scale(1.1);
+            /* Увеличение логотипа при наведении */
         }
 
         .menu {
@@ -104,7 +111,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 64px 32px;
-            width: 100%;            
+            width: 100%;
             height: 400px;
             background-color: #f5f5f5;
         }
@@ -181,7 +188,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 100%;            
+            width: 100%;
             height: 27em;
             text-align: center;
             background-color: #e3e3e3;
@@ -198,8 +205,8 @@
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
-            align-items: center;         
-            width: 100%;            
+            align-items: center;
+            width: 100%;
             padding: 40px 65px;
             background-color: #ffffff;
             box-shadow: inset 0 -1px 3px 0 #d9d9d9;
@@ -210,7 +217,7 @@
             flex-direction: column;
             justify-content: space-evenly;
             align-items: center;
-            width: 100%;            
+            width: 100%;
             padding: 40px 65px;
             background-color: #f5f5f5;
             box-shadow: inset 0 -1px 3px 0 #d9d9d9;
@@ -291,34 +298,39 @@
 
         /* Footer */
         .footer {
-            width: 100%;            
+            width: 100%;
             background-color: #FFFFFF;
             color: #1e1e1e;
             padding: 30px 20px;
             display: flex;
             justify-content: space-evenly;
-            align-items: center;     
+            align-items: center;
         }
 
         .footer .footer-logo {
             display: flex;
             flex-direction: column;
-            align-items: center;            
+            align-items: center;
         }
 
         .footer .footer-logo .footer-logo-img {
             width: 90px;
             height: 106px;
             margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .footer .footer-logo .footer-logo-img:hover{
+            transform: scale(1.1);
         }
 
         .footer .social-buttons {
             display: flex;
-            flex-direction: row;            
+            flex-direction: row;
             width: 145px;
             height: 24px;
-            gap: 10px;  
-        }         
+            gap: 10px;
+        }
 
         .footer .footer-text {
             display: flex;
@@ -331,9 +343,9 @@
             padding: 24px;
         }
 
-        .footer .footer-text h3 { 
+        .footer .footer-text h3 {
             font-family: Inter;
-            font-weight: 400;                     
+            font-weight: 400;
             display: flex;
             font-size: 32px;
             line-height: 1.2;
@@ -345,17 +357,17 @@
             font-weight: 400;
             font-size: 16px;
             line-height: 1.2;
-            margin-bottom: 16px;            
+            margin-bottom: 16px;
         }
 
         .footer .footer-text p1 {
             font-family: Inter;
             font-weight: 400;
             font-size: 16px;
-            line-height: 1.2;                       
+            line-height: 1.2;
         }
 
-        .footer .footer-text h4{
+        .footer .footer-text h4 {
             font-family: Inter;
             font-weight: bold;
             font-size: 16px;
@@ -366,20 +378,24 @@
         .footer-text .material-symbols-outlined {
             font-size: 35px;
         }
+
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 
 <body>
     <!-- Header -->
     <header class="header">
-        <div class="logo">
+        <a class="logo" href="https://dunaev-k-s.github.io/outdoor-planner/">
             <img src="img/logo.png" alt="Outdoor planner logo">
             <span>Outdoor planner</span>
-        </div>
+        </a>
         <nav class="menu">
-            <button>Dashboard</button>
-            <button>Calendar</button>
-            <button>Forecast</button>
+            <button onclick="location.href='#Dashboard'">Dashboard</button>
+            <button onclick="location.href='#Calendar'">Calendar</button>
+            <button onclick="location.href='#Weather'">Forecast</button>
         </nav>
 
         <nav class="auth">
@@ -388,16 +404,16 @@
     </header>
 
     <!-- Hero action -->
-    <section class="main-content">
+    <section id="Dashboard" class="main-content">
         <h1>What's Meant to Be Will Find Its Way</h1>
         <h2>Embrace the Journey</h2>
         <div class="btn-group"></div>
         <div class="btn-event">
-            <button>Create event</button>
+            <button onclick="location.href='#Calendar'">Create event</button>
         </div>
 
         <div class="btn-weather">
-            <button>Explore weather</button>
+            <button onclick="location.href='#Weather'">Explore weather</button>
         </div>
         </div>
     </section>
@@ -408,7 +424,7 @@
     </section>
 
     <!-- Calendar widget block -->
-    <section class="widget-calendar">
+    <section id="Calendar" class="widget-calendar">
         <div class="widget-block-content">
             <div>
                 <h3>Calendar</h3>
@@ -426,7 +442,7 @@
     </section>
 
     <!-- Weather widget block -->
-    <section class="widget-weather">
+    <section id="Weather" class="widget-weather">
         <div class="widget-block-content">
             <div>
                 <h3>Weather forecast</h3>
@@ -446,11 +462,12 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-logo">
-            <img class="footer-logo-img" src="img/logo.png" alt="Outdoor planner logo">
+            <a href="https://dunaev-k-s.github.io/outdoor-planner/"><img class="footer-logo-img" src="img/logo.png" alt="Outdoor planner logo"></a>            
             <div class="social-buttons">
                 <a href="https://facebook.com" target="_blank"><img height="24" width="auto" src="img/facebook.png"></a>
                 <a href="https://x.com" target="_blank"><img height="24" width="auto" src="img/twitter.png"></a>
-                <a href="https://instagram.com" target="_blank"><img height="24" width="auto" src="img/instagram.png"></a>
+                <a href="https://instagram.com" target="_blank"><img height="24" width="auto"
+                        src="img/instagram.png"></a>
                 <a href="https://linkedin.com" target="_blank"><img height="24" width="auto" src="img/linkedin.png"></a>
             </div>
         </div>
@@ -460,15 +477,17 @@
             </span>
             <div>
                 <h3>Outdoor planner application</h3>
-                <p>This is an educational project for help in learning the programming languages Javascript and Python.</p>
+                <p>This is an educational project for help in learning the programming languages Javascript and Python.
+                </p>
 
-                    <h4>Functionality:</h4>
-                    <p1>The main functionality of the application is selecting a date for an outdoor event with the ability
+                <h4>Functionality:</h4>
+                <p1>The main functionality of the application is selecting a date for an outdoor event with the ability
                     to
                     view the weather forecast. After selecting a date, the application should monitor changes in weather
                     conditions and notify the user if anything changes. Over time, additional conditions will be added,
                     such
-                    as the participation of other people who can join or leave, check tickets have been purchased or other
+                    as the participation of other people who can join or leave, check tickets have been purchased or
+                    other
                     available APIs.</p1>
             </div>
         </div>
